@@ -1,0 +1,24 @@
+{
+  "sheetName": "zones",
+  "model": "Zone",
+  "columns": {
+    "Manufacturer Name": {
+      "property": "manufacturer_id"
+    },
+    "Name": {
+      "model": "Zone",
+      "property": "name"
+    }
+  },
+  "relations": {
+    "manufacturer_id": {
+      "model": "Manufacturer",
+      "queryDependencies": [
+        {
+          "queryProperty": "slug",
+          "objectProperty": "manufacturer_id"
+        }
+      ]
+    }
+  }
+}

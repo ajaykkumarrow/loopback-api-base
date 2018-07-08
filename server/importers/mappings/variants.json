@@ -1,0 +1,228 @@
+{
+  "sheetName": "variants",
+  "model": "Variant",
+  "columns": {
+    "Vehicle Name": {
+      "property": "vehicle_id"
+    },
+    "Variant Name": {
+      "model": "Variant",
+      "property": "name"
+    },
+    "type": {
+      "model": "Variant",
+      "property": "type"
+    },
+    "description": {
+      "model": "Variant",
+      "property": "description"
+    },
+    "displacement": {
+      "model": "Variant",
+      "property": "displacement"
+    },
+    "cylinders": {
+      "model": "Variant",
+      "property": "cylinders"
+    },
+    "max power": {
+      "model": "Variant",
+      "property": "max_power"
+    },
+    "maximum torque": {
+      "model": "Variant",
+      "property": "maximum_torque"
+    },
+    "bore": {
+      "model": "Variant",
+      "property": "bore"
+    },
+    "stroke": {
+      "model": "Variant",
+      "property": "stroke"
+    },
+    "valves per cylinder": {
+      "model": "Variant",
+      "property": "valves_per_cylinder"
+    },
+    "fuel delivery system": {
+      "model": "Variant",
+      "property": "fuel_delivery_system"
+    },
+    "fuel type": {
+      "model": "Variant",
+      "property": "fuel_type"
+    },
+    "ignition": {
+      "model": "Variant",
+      "property": "ignition"
+    },
+    "spark plugs": {
+      "model": "Variant",
+      "property": "spark_plugs"
+    },
+    "cooling system": {
+      "model": "Variant",
+      "property": "cooling_system"
+    },
+    "gearbox type": {
+      "model": "Variant",
+      "property": "gearbox_type"
+    },
+    "no of gears": {
+      "model": "Variant",
+      "property": "no_of_gears"
+    },
+    "transmission type": {
+      "model": "Variant",
+      "property": "transmission_type"
+    },
+    "clutch": {
+      "model": "Variant",
+      "property": "clutch"
+    },
+    "brake type": {
+      "model": "Variant",
+      "property": "brake_type"
+    },
+    "front disc": {
+      "model": "Variant",
+      "property": "front_disc"
+    },
+    "front disc drum size": {
+      "model": "Variant",
+      "property": "front_disc_drum_size"
+    },
+    "rear disc": {
+      "model": "Variant",
+      "property": "rear_disc"
+    },
+    "rear disc drum size": {
+      "model": "Variant",
+      "property": "rear_disc_drum_size"
+    },
+    "calliper type": {
+      "model": "Variant",
+      "property": "calliper_type"
+    },
+    "wheel size": {
+      "model": "Variant",
+      "property": "wheel_size"
+    },
+    "front tyre": {
+      "model": "Variant",
+      "property": "front_tyre"
+    },
+    "rear tyre": {
+      "model": "Variant",
+      "property": "rear_tyre"
+    },
+    "tubeless tyres": {
+      "model": "Variant",
+      "property": "tubeless_tyres"
+    },
+    "radial tyres": {
+      "model": "Variant",
+      "property": "radial_tyres"
+    },
+    "alloy wheels": {
+      "model": "Variant",
+      "property": "alloy_wheels"
+    },
+    "front suspension": {
+      "model": "Variant",
+      "property": "front_suspension"
+    },
+    "rear suspension": {
+      "model": "Variant",
+      "property": "rear_suspension"
+    },
+    "kerb weight": {
+      "model": "Variant",
+      "property": "kerb_weight"
+    },
+    "overall length": {
+      "model": "Variant",
+      "property": ""
+    },
+    "overall width": {
+      "model": "Variant",
+      "property": "overall_width"
+    },
+    "overall height": {
+      "model": "Variant",
+      "property": "overall_height"
+    },
+    "wheelbase": {
+      "model": "Variant",
+      "property": "wheelbase"
+    },
+    "ground clearance": {
+      "model": "Variant",
+      "property": "ground_clearance"
+    },
+    "seat height": {
+      "model": "Variant",
+      "property": "seat_height"
+    },
+    "chasis type": {
+      "model": "Variant",
+      "property": "chasis_type"
+    },
+    "fuel tank capacity": {
+      "model": "Variant",
+      "property": "fuel_tank_capacity"
+    },
+    "reserve fuel capacity": {
+      "model": "Variant",
+      "property": "reserve_fuel_capacity"
+    },
+    "fuel efficiency overall": {
+      "model": "Variant",
+      "property": "fuel_efficiency_overall"
+    },
+    "fuel efficiency range": {
+      "model": "Variant",
+      "property": "fuel_efficiency_range"
+    },
+    "top speed": {
+      "model": "Variant",
+      "property": "top_speed"
+    },
+    "zero to sixty kmph": {
+      "model": "Variant",
+      "property": "zero_to_sixty_kmph"
+    },
+    "zero to eighty kmph": {
+      "model": "Variant",
+      "property": "zero_to_eighty_kmph"
+    },
+    "zero to forty kmph": {
+      "model": "Variant",
+      "property": "zero_to_forty_kmph"
+    },
+    "sixty to zero kmph": {
+      "model": "Variant",
+      "property": "sixty_to_zero_kmph"
+    },
+    "eighty to zero kmph": {
+      "model": "Variant",
+      "property": "eighty_to_zero_kmph"
+    },
+    "Image": {
+      "model": "Variant",
+      "property": "image_url"
+    }
+  },
+  "relations": {
+    "vehicle_id": {
+      "model": "Vehicle",
+      "queryDependencies": [
+        {
+          "queryProperty": "name",
+          "objectProperty": "vehicle_id"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "sheetName": "financiers",
+  "model": "Financier",
+  "columns": {
+    "Name": {
+      "model": "Financier",
+      "property": "name"
+    },
+    "Slug": {
+      "model": "Financier",
+      "property": "slug"
+    },
+    "Logo": {
+      "model": "Financier",
+      "property": "logo_url"
+    },
+    "Image": {
+      "model": "Financier",
+      "property": "image_url"
+    }
+  },
+  "relations": {
+  }
+}

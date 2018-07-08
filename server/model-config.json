@@ -1,0 +1,57 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models",
+      "./api_models"
+    ],
+   "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins",
+      "../node_modules/loopback-setup-remote-methods-mixin"
+    ]
+  },
+  "Users": {
+    "dataSource": "postgres",
+    "public": true
+  },
+  "AccessToken": {
+    "dataSource": "postgres",
+    "public": false,
+    "relations": {
+      "user": {
+        "type": "belongsTo",
+        "model": "Users",
+        "foreignKey": "userId"
+      }
+    }
+  },
+  "ACL": {
+    "dataSource": "postgres",
+    "public": false
+  },
+  "Roles": {
+    "dataSource": "postgres",
+    "public": true
+  },
+  "UserRole": {
+    "dataSource": "postgres",
+    "public": true
+  },
+  "Register": {
+    "dataSource": "lb-memory",
+    "public": false
+  },
+  "Login": {
+    "dataSource": "lb-memory",
+    "public": false
+  },
+  "UserAccessToken": {
+    "dataSource": "lb-memory",
+    "public": false
+  }
+}

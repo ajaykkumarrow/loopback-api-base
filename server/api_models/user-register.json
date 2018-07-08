@@ -1,0 +1,46 @@
+{
+  "name": "Register",
+  "properties": {
+    "name" : {
+      "type": "string",
+      "postgresql": {
+       "dataType": "character varying"
+     }
+    },
+    "email" : {
+      "type": "string",
+      "required": false,
+      "postgresql": {
+        "dataType": "character varying"
+      }
+    },
+    "gender" : {
+      "type": "string",
+      "required": false
+    },
+    "age" : {
+      "type": "number",
+      "required": false
+    },
+    "mobile_no": {
+      "type": "string",
+      "required": true,
+      "postgresql": {
+       "dataType": "character varying"
+      }
+    },
+    "is_active" : {
+      "type": "boolean",
+      "default": true
+    },
+    "emailVerified" : {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "mixins": {},
+  "methods": []
+}

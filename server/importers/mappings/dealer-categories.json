@@ -1,0 +1,12 @@
+{
+  "sheetName": "dealer-categories",
+  "model": "DealerCategory",
+  "columns": {
+    "Name": {
+      "model": "DealerCategory",
+      "property": "name"
+    }
+  },
+  "relations": {
+  }
+}

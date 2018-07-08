@@ -1,0 +1,31 @@
+{
+  "sheetName": "manufacturer",
+  "model": "Manufacturer",
+  "columns": {
+    "Name": {
+      "model": "Manufacturer",
+      "property": "name"
+    },
+    "Slug": {
+      "model": "Manufacturer",
+      "property": "slug"
+    },
+    "Office Address": {
+      "model": "Manufacturer",
+      "property": "office_address"
+    },
+    "Logo": {
+      "model": "Manufacturer",
+      "property": "logo_url"
+    },
+    "Image": {
+      "model": "Manufacturer",
+      "property": "image_url"
+    },
+    "Location": {
+      "property": "location"
+    }
+  },
+  "relations": {
+  }
+}

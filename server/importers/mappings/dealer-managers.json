@@ -1,0 +1,57 @@
+{
+  "sheetName": "dealer-managers",
+  "model": "Users",
+  "criteria": "findOrCreate",
+  "criteriaQuery": ["mobile_no", "user_type_name"],
+  "columns": {
+    "Dealer Pincode": {
+      "property": "dealer_pincode"
+    },
+    "Dealer Name": {
+      "property": "user_type_id"
+    },
+    "Dealer Manager - First name": {
+      "model": "Users",
+      "property": "first_name"
+    },
+    "Dealer Manager - Last name": {
+      "model": "Users",
+      "property": "last_name"
+    },
+    "Dealer Manager - Email-id": {
+      "model": "Users",
+      "property": "email"
+    },
+    "Mobile no": {
+      "model": "Users",
+      "property": "mobile_no"
+    },
+    "User Type Name": {
+      "model": "Users",
+      "property": "user_type_name"
+    },
+    "Password": {
+      "model": "Users",
+      "property": "password"
+    },
+    "User Type Name": {
+      "property": "user_type_name",
+      "defaultValue": "Dealer"
+    }
+  },
+  "relations": {
+    "user_type_id": {
+      "model": "Dealer",
+      "queryDependencies": [
+        {
+          "queryProperty": "name",
+          "objectProperty": "user_type_id"
+        },
+        {
+          "queryProperty": "pincode",
+          "objectProperty": "dealer_pincode"
+        }
+      ]
+    }
+  }
+}

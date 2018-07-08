@@ -1,0 +1,52 @@
+{
+  "sheetName": "cities",
+  "model": "City",
+  "columns": {
+    "Manufacturer Name": {
+      "property": "manufacturer_id"
+    },
+    "Zone Name": {
+      "property": "zone_id"
+    },
+    "State Name": {
+      "property": "state_id"
+    },
+    "Name": {
+      "model": "City",
+      "property": "name"
+    }
+  },
+  "relations": {
+    "manufacturer_id": {
+      "model": "Manufacturer",
+      "queryDependencies": [
+        {
+          "queryProperty": "slug",
+          "objectProperty": "manufacturer_id"
+        }
+      ]
+    },
+    "zone_id": {
+      "model": "Zone",
+      "queryDependencies": [
+        {
+          "queryProperty": "name",
+          "objectProperty": "zone_id"
+        }
+      ]
+    },
+    "state_id": {
+      "model": "State",
+      "queryDependencies": [
+        {
+          "queryProperty": "name",
+          "objectProperty": "state_id"
+        },
+        {
+          "queryProperty": "zone_id",
+          "objectProperty": "zone_id"
+        }
+      ]
+    }
+  }
+}

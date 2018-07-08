@@ -1,0 +1,44 @@
+{
+  "sheetName": "vehicle-features",
+  "model": "VehicleFeature",
+  "columns": {
+    "Manufacturer Name": {
+      "property": "manufacturer_id"
+    },
+    "Vehicle Name": {
+      "property": "vehicle_id"
+    },
+    "Name": {
+      "model": "VehicleFeature",
+      "property": "name"
+    },
+    "description": {
+      "model": "VehicleFeature",
+      "property": "description"
+    },
+    "Image": {
+      "model": "VehicleFeature",
+      "property": "image_url"
+    }
+  },
+  "relations": {
+    "manufacturer_id": {
+      "model": "Manufacturer",
+      "queryDependencies": [
+        {
+          "queryProperty": "slug",
+          "objectProperty": "manufacturer_id"
+        }
+      ]
+    },
+    "vehicle_id": {
+      "model": "Vehicle",
+      "queryDependencies": [
+        {
+          "queryProperty": "slug",
+          "objectProperty": "vehicle_id"
+        }
+      ]
+    }
+  }
+}

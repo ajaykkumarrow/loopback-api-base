@@ -1,0 +1,22 @@
+{
+  "name": "UserAccessToken",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+  },
+  "properties": {
+    "accessToken" : {
+      "type" : "AccessToken"
+    },
+    "user" : {
+      "type": "Users"
+    }
+  },
+  "acls": [],
+  "mixins": {
+    "SetupRemoteMethods": {
+      "disableAllExcept": []
+    }
+  },
+  "methods": []
+}

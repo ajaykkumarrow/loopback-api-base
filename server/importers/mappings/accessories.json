@@ -1,0 +1,60 @@
+{
+  "sheetName": "accessories",
+  "model": "Accessory",
+  "columns": {
+    "Slug": {
+      "property": "manufacturer_id"
+    },
+    "Vehicle Name": {
+      "property": "vehicle_id"
+    },
+    "Name": {
+      "model": "Accessory",
+      "property": "name"
+    },
+    "Item Code": {
+      "model": "Accessory",
+      "property": "item_code"
+    },
+    "Price": {
+      "model": "Accessory",
+      "property": "price"
+    },
+    "SGST Price" : {
+      "model": "Accessory",
+      "property": "sgst_price"
+    },
+    "GST Price" : {
+      "model": "Accessory",
+      "property": "gst_price"
+    },
+    "Image": {
+      "model": "Accessory",
+      "property": "image_url"
+    },
+    "Description" : {
+      "model": "Accessory",
+      "property": "description"
+    }
+  },
+  "relations": {
+    "manufacturer_id": {
+      "model": "Manufacturer",
+      "queryDependencies": [
+        {
+          "queryProperty": "slug",
+          "objectProperty": "manufacturer_id"
+        }
+      ]
+    },
+    "vehicle_id": {
+      "model": "Vehicle",
+      "queryDependencies": [
+        {
+          "queryProperty": "name",
+          "objectProperty": "vehicle_id"
+        }
+      ]
+    }
+  }
+}

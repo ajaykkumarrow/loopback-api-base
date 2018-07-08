@@ -1,0 +1,108 @@
+{
+  "name": "Users",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "postgresql": {
+      "table": "users"
+     }
+   },
+  "properties": {
+    "id": {
+      "id": true,
+      "type": "string",
+      "postgresql": {
+        "dbDefault": "uuid_generate_v4()",
+        "dataType": "uuid"
+      }
+    },
+    "name" : {
+      "type": "string",
+      "postgresql": {
+       "dataType": "character varying"
+     }
+    },
+    "email" : {
+      "type": "string",
+      "required": false,
+      "postgresql": {
+        "dataType": "character varying"
+      }
+    },
+    "gender" : {
+      "type": "string",
+      "required": false
+    },
+    "age" : {
+      "type": "number",
+      "required": false
+    },
+    "mobile_no": {
+      "type": "string",
+      "required": true,
+      "postgresql": {
+       "dataType": "character varying"
+      }
+    },
+    "is_active" : {
+      "type": "boolean",
+      "default": true
+    },
+    "created_at": {
+      "type": "date",
+      "defaultFn": "now",
+      "postgresql": {
+        "dataType": "timestamp without time zone"
+      }
+    },
+    "updated_at": {
+      "type": "date",
+      "postgresql": {
+        "dataType": "timestamp without time zone"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user_role": {
+      "type": "hasMany",
+      "model": "UserRole",
+      "foreignKey": "user_id",
+      "postgresql": {
+        "dataType": "uuid"
+      }
+    },
+    "AccessToken": {
+      "type": "hasMany",
+      "model": "AccessToken",
+      "foreignKey": "userId"
+    }
+  },
+  "acls": [
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property" : ["prototype.patchAttributes"]
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property" : ["loginUser","register"]
+    }
+  ],
+  "mixins": {
+    "SetupRemoteMethods": {
+      "ignoreACL": true,
+      "disableAllExcept": ["register", "loginUser"]
+    }
+  },
+  "methods": []
+}

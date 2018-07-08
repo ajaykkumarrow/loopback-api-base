@@ -1,0 +1,10 @@
+node_modules
+coverage
+server/boot
+test
+integration-test
+server/generators
+server/migrations
+server/db_migrate.js
+server/autoupdate.js
+server/server.js

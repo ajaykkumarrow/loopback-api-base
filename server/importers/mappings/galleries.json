@@ -1,0 +1,32 @@
+{
+  "sheetName": "galleries",
+  "model": "VehicleGallery",
+  "columns": {
+    "Vehicle Name": {
+      "property": "vehicle_id"
+    },
+    "Image": {
+      "model": "VehicleGallery",
+      "property": "image_url"
+    },
+    "Is 360 Image": {
+      "model": "VehicleGallery",
+      "property": "is_three_sixty"
+    },
+    "Position": {
+      "model": "VehicleGallery",
+      "property": "position"
+    }
+  },
+  "relations": {
+    "vehicle_id": {
+      "model": "Vehicle",
+      "queryDependencies": [
+        {
+          "queryProperty": "slug",
+          "objectProperty": "vehicle_id"
+        }
+      ]
+    }
+  }
+}

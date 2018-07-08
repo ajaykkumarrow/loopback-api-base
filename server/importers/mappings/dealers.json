@@ -1,0 +1,120 @@
+{
+  "sheetName": "dealers",
+  "model": "Dealer",
+  "columns": {
+    "Manufacturer Name": {
+      "property": "manufacturer_id"
+    },
+    "Dealer Id in DMS": {
+      "model": "Dealer",
+      "property": "external_id"
+    },
+    "Dealer Name": {
+      "model": "Dealer",
+      "property": "name"
+    },
+    "Dealer Code": {
+      "model": "Dealer",
+      "property": "dealer_code"
+    },
+    "Mobile no": {
+      "model": "Dealer",
+      "property": "mobile_no"
+    },
+    "Dealer Address line-1": {
+      "model": "Dealer",
+      "property": "address_line_1"
+    },
+    "Dealer Address line-2": {
+      "model": "Dealer",
+      "property": "address_line_2"
+    },
+    "City": {
+      "property": "city_id"
+    },
+    "State": {
+      "property": "state_id"
+    },
+    "Pincode": {
+      "model": "Dealer",
+      "property": "pincode"
+    },
+    "Land line no": {
+      "model": "Dealer",
+      "property": "landline_no"
+    },
+    "GST No": {
+      "model": "Dealer",
+      "property": "gst_number"
+    },
+    "PAN": {
+      "model": "Dealer",
+      "property": "gst_number"
+    },
+    "Zone": {
+      "property": "zone_id"
+    },
+    "Region": {
+      "property": "region_id"
+    },
+    "Location": {
+      "property": "location"
+    }
+  },
+  "relations": {
+    "manufacturer_id": {
+      "model": "Manufacturer",
+      "queryDependencies": [
+        {
+          "queryProperty": "slug",
+          "objectProperty": "manufacturer_id"
+        }
+      ]
+    },
+    "city_id": {
+      "model": "City",
+      "queryDependencies": [
+        {
+          "queryProperty": "name",
+          "objectProperty": "city_id"
+        }
+      ]
+    },
+    "region_id": {
+      "model": "Region",
+      "queryDependencies": [
+        {
+          "queryProperty": "name",
+          "objectProperty": "region_id"
+        }
+      ]
+    },
+    "zone_id": {
+      "model": "Zone",
+      "queryDependencies": [
+        {
+          "queryProperty": "name",
+          "objectProperty": "zone_id"
+        }
+      ]
+    },
+    "state_id": {
+      "model": "State",
+      "queryDependencies": [
+        {
+          "queryProperty": "name",
+          "objectProperty": "state_id"
+        }
+      ]
+    },
+    "dealer_category_id": {
+      "model": "DealerCategory",
+      "queryDependencies": [
+        {
+          "queryProperty": "name",
+          "objectProperty": "dealer_category_id"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "plugins": ["node"],
+  "extends": ["airbnb"],
+  "env": {"es6": true},
+  "parserOptions": {"ecmaVersion": 2018},
+  "rules": {
+    "node/exports-style": ["error", "module.exports"],
+    "no-await-in-loop": 0
+  }
+}

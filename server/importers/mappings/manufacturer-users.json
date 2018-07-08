@@ -1,0 +1,50 @@
+{
+  "sheetName": "manufacturer-users",
+  "model": "Users",
+  "criteria": "findOrCreate",
+  "criteriaQuery": ["mobile_no", "user_type_name"],
+  "columns": {
+    "Manufacturer Slug": {
+      "property": "user_type_id"
+    },
+    "First name": {
+      "model": "Users",
+      "property": "first_name"
+    },
+    "Last name": {
+      "model": "Users",
+      "property": "last_name"
+    },
+    "Email-id": {
+      "model": "Users",
+      "property": "email"
+    },
+    "Mobile no": {
+      "model": "Users",
+      "property": "mobile_no"
+    },
+    "User Type Name": {
+      "model": "Users",
+      "property": "user_type_name"
+    },
+    "Password": {
+      "model": "Users",
+      "property": "password"
+    },
+    "User Type Name": {
+      "property": "user_type_name",
+      "defaultValue": "Manufacturer"
+    }
+  },
+  "relations": {
+    "user_type_id": {
+      "model": "Manufacturer",
+      "queryDependencies": [
+        {
+          "queryProperty": "slug",
+          "objectProperty": "user_type_id"
+        }
+      ]
+    }
+  }
+}
